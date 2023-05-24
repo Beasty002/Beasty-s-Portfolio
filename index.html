@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        
+        #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./assets/images/bgc-image.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .container {
+            padding: 0;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+        
+        .logo {
+            width: 140px;
+            margin-left: 50px;
+        }
+        
+        nav ul {
+            margin-right: 50px;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        
+        nav ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 30px;
+            border-radius: 29px;
+            position: relative;
+        }
+        /*nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            transition: 1s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        } */
+        
+        nav ul li a:hover {
+            color: black;
+            background-color: white;
+            transition: 1s;
+        }
+        
+        .header-text {
+            margin-top: 12%;
+            font-size: 20px;
+            margin-left: 8vw;
+        }
+        
+        .header-text h1 {
+            font-size: 90px;
+            margin-top: 0px;
+            letter-spacing: 4px;
+            font-family: 'DM Serif Text', serif;
+        }
+        
+        .header-text p {
+            width: 450px;
+            font-size: 20px;
+            color: rgb(43, 43, 43);
+        }
+        
+        .header-text h2 {
+            font-size: 40px;
+            letter-spacing: 2px;
+        }
+        
+        #half-pic {
+            float: right;
+            position: absolute;
+            right: 8vw;
+            width: 82vh;
+            bottom: 0;
+        }
+        
+        .second-page {
+            width: 100vw;
+            height: 100vh;
+        }
+        /*----------------------about---------------------------*/
+        
+        #about {
+            width: 100%;
+            height: 100vh;
+            padding: 80px 0;
+        }
+        
+        h1 {
+            color: black;
+        }
+        
+        #about .container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 0.1fr;
+            gap: 80px;
+        }
+        
+        #about .container .image img {
+            width: 80%;
+            margin-left: 100px;
+            box-shadow: 2px 87px 124px -66px rgba(0, 0, 0, 0.62);
+            -webkit-box-shadow: 2px 87px 124px -66px rgba(0, 0, 0, 0.62);
+            -moz-box-shadow: 2px 87px 124px -66px rgba(0, 0, 0, 0.62);
+        }
+        
+        .sub-title {
+            font-size: 80px;
+            font-weight: 600;
+        }
+        
+        .tab-titles {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+        
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+        }
+        
+        .tab-links.active-link::after {
+            width: 100%;
+        }
+        
+        .tab-contents ul li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .outer-div {
+            width: 200px;
+            border-radius: 10px;
+            background-color: grey;
+            display: inline-block;
+            margin-bottom: 0;
+            margin-left: 40px;
+        }
+        
+        .skill-html {
+            width: 90%;
+            background-color: peachpuff;
+            border-radius: 10px;
+            height: 16px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./assets/images/white-logo.png" class="logo" alt="">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Projects</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h2>HI , I'm Beasty . I am a</h2>
+                <br>
+                <h1>Frontend <br>Developer.</h1>
+                <br>
+                <!-- <p>A Passionate Frontend Developer with expertise in HTML, CSS, and JavaScript. Creating intuitive and responsive user interfaces to enhance the user experience</p> -->
+            </div>
+            <!-- <img src="./assets/images/luffy.png" id="half-pic" alt=""> -->
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="image">
+                <img src="./assets/images/about-pic.png" alt="">
+            </div>
+            <div class="div-contents">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm BEasty, a web developer and UI/UX designer with a love for art. I enjoy creating captivating digital experiences by merging my technical skills with artistic aesthetics. In my free time, I immerse myself in movies, anime, and mangafor
+                    inspiration. Quality sleep, delicious food, and exploring different art forms also bring joy to my life. Art plays a significant role in my work, allowing me to infuse unique aesthetics and visual storytelling into my designs.It's
+                    a passion that fuels my creativity and enhances the digital experiences I create.</p>
+                <br>
+                <div class="tab-titles">
+                    <p class="tab-links active-link">Skills</p>
+                    <p class="tab-links">Experience</p>
+                    <p class="tab-links">Education</p>
+                </div>
+                <div class="tab-contents">
+                    <ul>
+                        <li><span>HTML:</span>
+                            <div class="outer-div">
+                                <div class="skill-html"></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div></div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>

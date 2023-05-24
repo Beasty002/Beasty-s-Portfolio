@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="First-page page">
+        <header>
+            <div class="logo"><img src="./assets/images/white-logo.png" alt="Beasty Logo" class="beasty"></div>
+            <div class="triple">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li> <a href="" class="home">Home</a></li>
+                    <li><a href="" class="about">About</a></li>
+                    <li><a href="" class="about">Projects</a></li>
+                    <li> <a href="" class="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="first-main">
+            <div class="welocome-content">
+                <h2>HI , I'm Beasty . I am a</h2>
+                <br>
+                <h1>Frontend Developer.</h1>
+                <br>
+                <!-- <p>A Passionate Frontend Developer with expertise in HTML, CSS, and JavaScript. Creating intuitive and responsive user interfaces to enhance the user experience</p> -->
+            </div>
+            <div></div>
+            <div class="image-container">
+                <img src="./assets/images/half-photo.png" id="half-photo" alt="">
+            </div>
+
+        </main>
+    </div>
+    <script>
+        triple = document.querySelector(".triple");
+        triple.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>
