@@ -3,413 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Text&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Bebas Neue', sans-serif;
-        }
-        
-        #header {
-            width: 100%;
-            height: 100vh;
-            background-image: url(./assets/images/bgc-image.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        
-        .container {
-            padding: 0;
-        }
-        
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            background-color: black;
-        }
-        
-        .logo {
-            width: 140px;
-            margin-left: 50px;
-        }
-        
-        nav ul {
-            margin-right: 50px;
-        }
-        
-        nav ul li {
-            display: inline-block;
-            list-style: none;
-            margin: 10px 20px;
-        }
-        
-        nav ul li a {
-            color: whitesmoke;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 30px;
-            border-radius: 29px;
-            position: relative;
-        }
-        /*nav ul li a::after {
-            content: '';
-            width: 0;
-            height: 3px;
-            background: #ff004f;
-            position: absolute;
-            left: 0;
-            bottom: 0px;
-            transition: 1s;
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        } */
-        
-        nav ul li a:hover {
-            color: black;
-            background-color: white;
-            transition: 1s;
-        }
-        
-        .header-text {
-            margin-top: 12%;
-            font-size: 20px;
-            margin-left: 8vw;
-        }
-        
-        .header-text h1 {
-            font-size: 90px;
-            margin-top: 0px;
-            letter-spacing: 4px;
-            font-family: 'DM Serif Text', serif;
-        }
-        
-        .header-text p {
-            width: 450px;
-            font-size: 20px;
-            color: rgb(43, 43, 43);
-        }
-        
-        .header-text h2 {
-            font-size: 40px;
-            letter-spacing: 2px;
-        }
-        
-        #half-pic {
-            float: right;
-            position: absolute;
-            right: 8vw;
-            width: 82vh;
-            bottom: 0;
-        }
-        
-        .second-page {
-            width: 100vw;
-            height: 100vh;
-        }
-        /*----------------------about---------------------------*/
-        
-        #about {
-            width: 100%;
-            height: 100vh;
-            padding: 80px 0;
-        }
-        
-        h1 {
-            color: black;
-        }
-        
-        #about .container {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr 0.1fr;
-            gap: 80px;
-        }
-        
-        #about .container .image img {
-            width: 80%;
-            margin-left: 100px;
-            box-shadow: 2px 87px 124px -66px rgba(0, 0, 0, 0.62);
-            -webkit-box-shadow: 2px 87px 124px -66px rgba(0, 0, 0, 0.62);
-            -moz-box-shadow: 2px 87px 124px -66px rgba(0, 0, 0, 0.62);
-        }
-        
-        .sub-title {
-            font-size: 80px;
-            font-weight: 600;
-        }
-        
-        .div-contents p {
-            font-size: 18px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: #4e4e4e;
-        }
-        
-        .tab-titles {
-            display: flex;
-            margin: 20px 0 40px;
-        }
-        
-        .tab-titles .tab-links {
-            font-family: 'DM Serif Text', serif;
-            color: black;
-            font-weight: bold;
-            margin-right: 50px;
-            font-size: 30px;
-            font-weight: 500;
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .tab-links::after {
-            content: '';
-            width: 0;
-            height: 3px;
-            background-color: #ff004f;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            transition: 0.5s;
-        }
-        
-        .tab-links.active-link::after {
-            width: 100%;
-        }
-        
-        .tab-contents ul li {
-            display: flex;
-            align-items: center;
-        }
-        
-        .tab-contents.active-tab {
-            display: block;
-        }
-        
-        .tab-contents {
-            display: none;
-        }
-        
-        .outer-div {
-            width: 400px;
-            border-radius: 25px;
-            background-color: #494F56;
-            display: inline-block;
-            margin-bottom: 0;
-            margin-left: 40px;
-        }
-        
-        .skill-set,
-        .experience-set,
-        .education-set {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            gap: 5px;
-        }
-        
-        .experience-set li,
-        .education-set li {
-            margin-left: 40px;
-        }
-        
-        .experience-set span,
-        .education-set span {
-            text-align: right;
-        }
-        
-        .experience-set li,
-        .experience-set span,
-        .education-set li,
-        .education-set span {
-            font-size: 24px;
-            letter-spacing: 2px
-        }
-        
-        .skill-name {
-            text-align: right;
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
-        
-        .skill-html {
-            width: 90%;
-            background-color: #E9C8D4;
-            border-radius: 10px;
-            height: 24px;
-        }
-        
-        .skill-css {
-            width: 70%;
-            background-color: #b786d0;
-            border-radius: 10px;
-            height: 24px;
-        }
-        
-        .skill-js {
-            width: 40%;
-            background-color: #61a1cb;
-            border-radius: 10px;
-            height: 24px;
-            transition: 2s;
-        }
-        
-        .skill-uiux {
-            width: 50%;
-            background-color: #38B6FF;
-            border-radius: 25px;
-            height: 24px;
-        }
-        
-        #about .container .image img {
-            position: relative;
-            margin-top: 20px;
-        }
-        /* -----------------------Projects ----------------------------*/
-        
-        #projects {
-            width: 100%;
-            height: 100vh;
-            padding: 80px 0;
-        }
-        /* #projects {
-            background: linear-gradient(-45deg, #F3E5F5, #f8e7ed, #f0e2f2, #eadbf1);
-            background-size: 400% 400%;
-            animation: gradient 1s ease infinite;
-            height: 100vh;
-        }
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        } */
-        
-        #projects .container h1 {
-            text-align: center;
-            font-size: 80px;
-            font-weight: 600;
-        }
-        
-        .project-contents {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        
-        @keyframes rotate {
-            100% {
-                transform: rotate(1turn);
-            }
-        }
-        
-        .project-topic {
-            letter-spacing: 2px;
-            color: white;
-            position: relative;
-            z-index: 0;
-            width: 400px;
-            height: 30vw;
-            margin: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            padding: 2rem;
-            &::before {
-                content: '';
-                position: absolute;
-                z-index: -2;
-                left: -50%;
-                top: -50%;
-                width: 200%;
-                height: 200%;
-                background-color: #ffffff;
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                background-image: conic-gradient(transparent, rgb(0, 0, 0), transparent 100%);
-                animation: rotate 1s linear infinite;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                z-index: -1;
-                left: 6px;
-                top: 6px;
-                width: calc(100% - 12px);
-                height: calc(100% - 12px);
-                background: #000;
-                border-radius: 5px;
-            }
-        }
-        
-        .p-content {
-            margin-top: 20px;
-        }
-        
-        .p-content p {
-            font-size: 18px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: #bebcbc;
-            margin-top: 20px;
-        }
-        
-        .btn {
-            display: block;
-            margin: 30px auto;
-            width: 300px;
-            border: 3px solid rgb(255, 63, 63);
-            background-color: black;
-            color: white;
-            letter-spacing: 2px;
-            text-align: center;
-            padding: 14px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        
-        .btn:hover {
-            transition: 0.3s;
-            background-color: rgb(255, 63, 63);
-            color: #000;
-        }
-        /*---------------------------Contact----------------------------------------*/
-        
-        #contact {
-            height: 100vh;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div id="header">
         <div class="container">
-            <nav>
+            <nav id="navbar" class="hidden">
                 <img src="./assets/images/white-logo.png" class="logo" alt="">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
 
                 </ul>
             </nav>
@@ -441,7 +55,7 @@
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
-                    <ul class="skill-set">
+                    <ul class="skill-set desc">
                         <span class="skill-name">HTML:</span>
                         <li>
                             <div class="outer-div">
@@ -468,10 +82,11 @@
                         </li>
                     </ul>
                 </div>
+                <br> <br>
                 <div class="tab-contents" id="experience">
-                    <ul class="experience-set">
+                    <ul class="experience-set desc">
                         <span>2022-current:</span>
-                        <li>CEO of BEasty corp</li>
+                        <li>CEO of Beasty corp</li>
                         <span>2018-2022:</span>
                         <li>STartup founder</li>
                         <span>2016-2018:</span>
@@ -482,7 +97,7 @@
 
                 </div>
                 <div class="tab-contents " id="education">
-                    <ul class="education-set">
+                    <ul class="education-set desc">
                         <span>2017-current:</span>
                         <li>PAdna jhyau la</li>
                         <span>2016-2017:</span>
@@ -490,7 +105,7 @@
                         <span>2015-2016:</span>
                         <li>k ho padai</li>
                         <span>2014-2015:</span>
-                        <li>lekhna khyau laas</li>
+                        <li>lekhna jhyau laathyo</li>
                     </ul>
 
                 </div>
@@ -536,17 +151,49 @@
         </div>
         <a href="#" class="btn">See more >  </a>
     </div>
+    <!-- ---------------------------------Contact---------------------------------------------- -->
     <div id="contact">
         <div class="container">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita vitae repellat nobis quam in aliquid numquam odio, quasi quibusdam, ipsam assumenda aliquam pariatur non tempora dignissimos necessitatibus esse. Maiores blanditiis repellat
-                sapiente nihil dignissimos? Consequuntur, perspiciatis repellendus! Ratione laboriosam ut voluptatibus! Quas hic error dolor neque? Sint accusamus voluptatibus nemo nihil incidunt obcaecati ipsa officia magnam necessitatibus maiores illum
-                eaque velit dolorem sunt dicta, pariatur deserunt! Praesentium consectetur est eveniet quos magni rem maxime. Dolorem eum perferendis id necessitatibus iste. Fugit libero obcaecati nihil, expedita optio fuga qui adipisci earum deserunt.
-                Omnis, nam vitae. Ab molestiae expedita excepturi eveniet cupiditate.</p>
-            <p><i class="fa-duotone fa-phone" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i></p>
+            <h1><i class="fa-sharp fa-solid fa-phone"></i>ontact me</h1>
+            <div class="contact-form">
+                <div id="contact-form-elements">
+                    <p>Get in touch or shoot me an email directly on <b>beasty@gmail.com</b></p>
+                    <form action="" id="Contact-message-form">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" mame="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" id="" placeholder="Your Message"></textarea>
+                        <button type="submit"><a href="mailto:name@email.com">Submit</a></button>
+                    </form>
+
+
+
+
+                </div>
+                <img src="./assets/images/black-drip.png" alt="" id="black-drip">
+
+
+            </div>
+
+            <div class="footer" id="footer">
+                <!-- <p><i class="fa-sharp fa-solid fa-arrow-up"></i></p> -->
+                <img src="./assets/images/white-drip.png" alt="">
+                <div class="social-logo">
+                    <a href="https://www.facebook.com/profile.php?id=100004839318257"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/aswin.6902/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Aswinchhetri7"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/Beasty002?tab=overview&from=2023-05-01&to=2023-05-27"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aswin-chhetri-43b5b4277/"><i class="fa-brands fa-linkedin-in"></i></a>
+
+
+                </div>
+                <hr class="logo-hr">
+                <div class="copyright">© copyright Beasty0002</div>
+            </div>
 
 
         </div>
     </div>
+
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");

@@ -6,51 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <title>Document</title>
+    <style>
+        #Contact-message-form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        #Contact-message-form input {
+            width: 50%;
+            margin-bottom: 20px;
+            font-size: 20px;
+            padding: 8px;
+        }
+        
+        .contact-form {
+            position: relative;
+        }
+        
+        #black-drip {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        /*-----------------footer-------------------*/
+        
+        .footer {
+            padding: 10px;
+            position: relative;
+            background-color: black;
+        }
+        
+        .social-logo {
+            margin-top: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        i {
+            color: #ffffff;
+            font-size: 50px;
+            margin-left: 20px;
+        }
+        
+        .logo-hr {
+            margin: auto;
+            text-align: center;
+            width: 30%;
+            border: 2px solid rgb(143, 116, 116);
+        }
+        
+        .footer img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500px;
+        }
+        
+        .copyright {
+            margin: 20px auto;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #bebcbc;
+            font-size: small;
+            font-weight: 100;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="First-page page">
-        <header>
-            <div class="logo"><img src="./assets/images/white-logo.png" alt="Beasty Logo" class="beasty"></div>
-            <div class="triple">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <nav class="nav-bar">
-                <ul>
-                    <li> <a href="" class="home">Home</a></li>
-                    <li><a href="" class="about">About</a></li>
-                    <li><a href="" class="about">Projects</a></li>
-                    <li> <a href="" class="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="first-main">
-            <div class="welocome-content">
-                <h2>HI , I'm Beasty . I am a</h2>
-                <br>
-                <h1>Frontend Developer.</h1>
-                <br>
-                <!-- <p>A Passionate Frontend Developer with expertise in HTML, CSS, and JavaScript. Creating intuitive and responsive user interfaces to enhance the user experience</p> -->
-            </div>
-            <div></div>
-            <div class="image-container">
-                <img src="./assets/images/half-photo.png" id="half-photo" alt="">
-            </div>
-
-        </main>
-    </div>
-    <script>
-        triple = document.querySelector(".triple");
-        triple.onclick = function() {
-            navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-    </script>
-
 </body>
 
 </html>
