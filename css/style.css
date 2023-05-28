@@ -265,17 +265,18 @@ nav ul li a:hover {
 
 .skill-css {
     width: 70%;
-    background-color: #b786d0;
-    border-radius: 10px;
+    background-color: #ca8ee8;
+    transition: 15s;
+    border-radius: 25px;
     height: 24px;
 }
 
 .skill-js {
     width: 40%;
     background-color: #61a1cb;
-    border-radius: 10px;
+    border-radius: 25px;
     height: 24px;
-    transition: 2s;
+    transition: 15s;
 }
 
 .skill-uiux {
