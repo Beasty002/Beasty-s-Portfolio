@@ -4,10 +4,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Beasty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        :root {
+            --content-width: 1200px;
+        }
+
+        body {
+            background-color: #0e1111;
+            color: #fff;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main>* {
+            width: var(--content-width);
+        }
+
+        .first-page {
+            height: 90dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first-page-content {
+            text-align: center;
+
+        }
+
+        h1 {
+            text-transform: uppercase;
+
+            font-family: "League Spartan", sans-serif;
+            font-size: 5.8rem;
+            background-color: #0e1111;
+            mix-blend-mode: lighten;
+        }
+
+        .landing-secondary-title {
+            color: gray;
+            font-size: 1.2rem;
+            margin: 15px 0px;
+        }
+
+        .side-nav {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .projects-section {
+            border-left: 6px dotted #414a4c;
+            border-right: 6px dashed #414a4c;
+            padding: 0px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .project {
+            display: flex;
+            gap: 20px;
+        }
+
+        .project>* {
+            flex: 1;
+        }
+
+        figure {
+            height: 500px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .left-project-content-container {
+            padding-right: 60px;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+            gap: 20px;
+        }
+
+        .right-project-content-container {
+            padding-right: 60px;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: end;
+            gap: 20px;
+        }
+
+        .right-project-content-container p {
+            text-align: left;
+        }
+
+        .project-title {
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        .project-description {
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-align: right;
+        }
+
+        .right-img-container {
+            position: relative;
+        }
+
+        .left-img-container {
+            position: relative;
+        }
+
+        .laptop-mockup {
+            position: absolute;
+            transition: all 0.8s ease;
+        }
+
+        .mobile-mockup {
+            position: absolute;
+            height: 250px;
+            right: 40px;
+            top: 40px;
+            transition: all 0.8s ease;
+
+        }
+
+        figure:hover .laptop-mockup {
+            transform: rotate(20deg);
+
+
+        }
+
+        figure:hover .mobile-mockup {
+            transform: rotate(-20deg);
+            right: 35px;
+        }
+
+        .see-more {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border: 2px solid red;
+            padding: 0.3em 0.8em;
+            width: fit-content;
+            align-self: center;
+        }
+
+        .see-more a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .div1 {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+
+            .indicator {
+                position: relative;
+                width: 50px;
+                height: 50px;
+
+                transform: rotate(45deg);
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    border: none;
+                    border-bottom: 3px solid #fff;
+                    border-right: 3px solid #fff;
+                    animation: animate 1s linear infinite;
+
+                    &:nth-child(1) {
+                        top: -30px;
+                        left: -30px;
+                        animation-delay: 0s;
+                    }
+
+                    &:nth-child(2) {
+                        top: -15px;
+                        left: -15px;
+                        animation-delay: 0.2s;
+                    }
+
+                    &:nth-child(3) {
+                        top: 0;
+                        left: 0;
+                        animation-delay: 0.4s;
+                    }
+
+                    &:nth-child(4) {
+                        top: 15px;
+                        left: 15px;
+                        animation-delay: 0.6s;
+                    }
+
+                    &:nth-child(5) {
+                        top: 30px;
+                        left: 30px;
+                        animation-delay: 0.8s;
+                    }
+                }
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                border-color: #fff;
+                transform: translate(0, 0);
+            }
+
+            20% {
+                border-color: #fff;
+                transform: translate(15px, 15px);
+            }
+
+            20.1%,
+            100% {
+                border-color: #ffd64a;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <aside class="side-nav">
+        <a href="" class="nav-link">Home</a>
+        <a href="" class="nav-link">About</a>
+        <a href="" class="nav-link">Works</a>
+        <a href="" class="nav-link">Resume</a>
+    </aside>
+    <main>
+        <section class="first-page">
+            <div class="first-page-content">
+                <h1>
+                    Hi, I'm Beasty
+                </h1>
+                <p class="landing-secondary-title">Got any idea in mind ? Then let he help your vision come to life .
+                </p>
+                <h1>
+                    A <span class="auto-type-container"><span class="auto-type"></span></span>
+                </h1>
+            </div>
+        </section>
+        <div class="div1">
+            <div class="indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <section class="projects-section">
+            <section class="project">
+                <div class="left-project-content-container">
+                    <i class="proct-contractor">Self-Project</i>
+                    <h2 class="project-title">Digital-kirana</h2>
+                    <p class="project-description">Making your Grocery Experience Simple and Easy , and Making Inventory
+                        Management better</p>
+
+
+                </div>
+                <a href="">
+                    <figure class="right-img-container">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                    </figure>
+                </a>
+            </section>
+            <section class="project">
+                <a href="">
+                    <figure class="left-img-container">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                    </figure>
+                </a>
+                <div class="right-project-content-container">
+                    <i class="proct-contractor">Self-Project</i>
+                    <h2 class="project-title">Tuder</h2>
+                    <p class="project-description">Connecting Students and Teachers All over the globe to make learning
+                        easy</p>
+                </div>
+
+            </section>
+            <section class="project">
+                <div class="left-project-content-container">
+                    <i class="proct-contractor">Self-Project</i>
+                    <h2 class="project-title">Digital-kirana</h2>
+                    <p class="project-description">Making your Grocery Experience Simple and Easy , and Making Inventory
+                        Management better</p>
+
+
+                </div>
+                <a href="">
+                    <figure class="right-img-container">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                    </figure>
+                </a>
+            </section>
+            <section class="project">
+                <a href="">
+                    <figure class="left-img-container">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                    </figure>
+                </a>
+                <div class="right-project-content-container">
+                    <i class="proct-contractor">Self-Project</i>
+                    <h2 class="project-title">Tuder</h2>
+                    <p class="project-description">Connecting Students and Teachers All over the globe to make learning
+                        easy</p>
+                </div>
+
+            </section>
+            <div class="see-more"><a href="">See More</a> <i class="fa-solid fa-arrow-right-long"></i></div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["UI/UX Designer", "Frontend Developer"],
+            typeSpeed: 80,
+            backSpeed: 70,
+            loop: true
+        })
+    </script>
+
 
 </body>
 
