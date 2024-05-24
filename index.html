@@ -6,14 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Luxurious+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Beasty</title>
     <style>
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -27,6 +41,7 @@
         body {
             background-color: #0e1111;
             color: #fff;
+            overflow-x: hidden;
         }
 
         main {
@@ -67,7 +82,7 @@
             margin: 15px 0px;
         }
 
-        .side-nav {
+        #navBar {
             position: absolute;
             right: 20px;
             top: 20px;
@@ -183,9 +198,22 @@
             font-size: 1.5rem;
             text-decoration: none;
             border: 2px solid red;
-            padding: 0.3em 0.8em;
+            padding: 0.3em 2.2em;
             width: fit-content;
             align-self: center;
+            transition: all 0.2s;
+        }
+
+        .see-more i {
+            transition: all 0.3s ease-in;
+        }
+
+        .see-more:hover {
+            background-color: red;
+        }
+
+        .see-more:hover i {
+            transform: translateX(15px);
         }
 
         .see-more a {
@@ -269,23 +297,200 @@
                 border-color: #ffd64a;
             }
         }
+
+        .hiddenh {
+            transition: all 1s;
+            filter: blur(50px);
+        }
+
+        .hshow {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .hidden {
+            opacity: 0;
+            transition: all 1s;
+            filter: blur(5px);
+            transform: translateX(-100%);
+
+        }
+
+        @media(prefers-reduced-motion) {
+            .hidden {
+                transition: none;
+            }
+        }
+
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+
+        .himg {
+            opacity: 0;
+            transition: all 1s;
+            filter: blur(5px);
+            transform: translateX(100%);
+
+        }
+
+        @media(prefers-reduced-motion) {
+            .hidden {
+                transition: none;
+            }
+        }
+
+        .iShow {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+
+        .contact-me {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .form-container {
+            position: relative;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            height: 400px;
+            width: 800px;
+            background-color: #fffbce;
+            color: #0e1111;
+        }
+
+        .social-link {
+            position: absolute;
+            bottom: 60px;
+            border-radius: 20px 20px 20px 0px;
+            padding: 0.2em 3em;
+
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .get-in {
+            font-family: "Luxurious Script", cursive;
+            font-weight: 200;
+            font-size: 10rem;
+            text-align: center;
+        }
+
+        .my-mail {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .my-mail a {
+            color: blue;
+            font-size: 2.3rem;
+        }
+
+        .social-link {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-link.insta {
+            left: -40px;
+            top: 300px;
+            background: linear-gradient(to right,
+                    #833ab4, #fd1d1d, #fcb045);
+            transform: rotate(-40deg);
+        }
+
+        .social-link.fb {
+            left: -40px;
+            top: 100px;
+            transform: rotate(-40deg);
+
+            background: linear-gradient(to right,
+                    #00c6ff, #0072ff);
+        }
+
+        .social-link.linkedin {
+            right: -40px;
+            top: 300px;
+            transform: rotate(40deg);
+            border-radius: 100px 100px 0px 100px;
+
+            background: linear-gradient(to right, #0077B5, #00A0DC);
+        }
+
+        .social-link.git {
+            right: -40px;
+            top: 100px;
+            transform: rotate(40deg);
+            border-radius: 100px 100px 0px 100px;
+            background: linear-gradient(to right, #4078c0, #000000);
+        }
+
+        .social-link.twitter {
+            right: -40px;
+            top: 200px;
+            transform: rotate(40deg);
+            border-radius: 100px 100px 0px 100px;
+            background: linear-gradient(to right, #1DA1F2, #14171A);
+        }
+
+        .social-link.behance {
+            left: -40px;
+            top: 200px;
+            transform: rotate(-40deg);
+
+            background: linear-gradient(to right, #1769FF, #7200FF);
+        }
+
+        .social-link {
+            position: absolute;
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            height: fit-content;
+            width: fit-content;
+            border-radius: 100px 100px 100px 0px;
+            transition: transform 0.3s;
+        }
+
+        .social-link:hover {
+            opacity: 0.8;
+            transform: rotate(0deg);
+        }
     </style>
 </head>
 
 <body>
-    <aside class="side-nav">
+    <nav id="navBar">
         <a href="" class="nav-link">Home</a>
         <a href="" class="nav-link">About</a>
         <a href="" class="nav-link">Works</a>
         <a href="" class="nav-link">Resume</a>
-    </aside>
+    </nav>
     <main>
-        <section class="first-page">
+        <section class="first-page ">
             <div class="first-page-content">
-                <h1>
+                <h1 class="hiddenh">
                     Hi, I'm Beasty
                 </h1>
-                <p class="landing-secondary-title">Got any idea in mind ? Then let he help your vision come to life .
+                <p class="landing-secondary-title">Let's turn your vision into reality with innovative design and
+                    seamless user experiences.
                 </p>
                 <h1>
                     A <span class="auto-type-container"><span class="auto-type"></span></span>
@@ -313,16 +518,16 @@
                 </div>
                 <a href="">
                     <figure class="right-img-container">
-                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
-                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup himg">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup himg">
                     </figure>
                 </a>
             </section>
             <section class="project">
                 <a href="">
                     <figure class="left-img-container">
-                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
-                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup hidden">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup hidden">
                     </figure>
                 </a>
                 <div class="right-project-content-container">
@@ -335,7 +540,7 @@
             </section>
             <section class="project">
                 <div class="left-project-content-container">
-                    <i class="proct-contractor">Self-Project</i>
+                    <i class="proct-contractor ">Self-Project</i>
                     <h2 class="project-title">Digital-kirana</h2>
                     <p class="project-description">Making your Grocery Experience Simple and Easy , and Making Inventory
                         Management better</p>
@@ -344,16 +549,16 @@
                 </div>
                 <a href="">
                     <figure class="right-img-container">
-                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
-                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup himg">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup himg">
                     </figure>
                 </a>
             </section>
             <section class="project">
                 <a href="">
                     <figure class="left-img-container">
-                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup">
-                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup">
+                        <img src="./Assets/laptop-mockup.png" alt="" class="laptop-mockup hidden">
+                        <img src="./Assets/mobile-mockup.png" alt="" class="mobile-mockup hidden">
                     </figure>
                 </a>
                 <div class="right-project-content-container">
@@ -364,9 +569,43 @@
                 </div>
 
             </section>
-            <div class="see-more"><a href="">See More</a> <i class="fa-solid fa-arrow-right-long"></i></div>
+            <a href="" class="see-more">See More <i class="fa-solid fa-arrow-right-long"></i></a>
+        </section>
+        <section class="contact-me">
+            <div class="form-container">
+                <h3 class="get-in">Get in touch</h3>
+                <p style="text-align: center;">Have any Idea or anything ? Feel free to contat me any time</p>
+                <h2 class="my-mail"><a href="mailto:aswinchhetri02@gmail.com"
+                        class="hiddenh">aswinchhetri02@gmail.com</a></h2>
+                <a href="" class="social-link insta hidden">Instagram</a>
+                <a href="" class="social-link fb hidden">Facebook</a>
+                <a href="" class="social-link behance hidden">Behance</a>
+                <a href="" class="social-link linkedin">LinkedIn</a>
+                <a href="" class="social-link git">Github</a>
+                <a href="" class="social-link twitter">Twitter</a>
+            </div>
         </section>
     </main>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".auto-type", {
@@ -375,6 +614,133 @@
             backSpeed: 70,
             loop: true
         })
+        const hobserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (
+                    entry.isIntersecting
+                ) {
+                    entry.target.classList.add('hshow');
+                }
+
+            });
+        });
+        const hiddenh = document.querySelectorAll('.hiddenh');
+        hiddenh.forEach((el) => hobserver.observe(el));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (
+                    entry.isIntersecting
+                ) {
+                    entry.target.classList.add('show');
+                }
+                else {
+                    entry.target.classList.remove('show');
+                }
+
+            });
+        });
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        const iObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (
+                    entry.isIntersecting
+                ) {
+                    entry.target.classList.add('iShow');
+                }
+                else {
+                    entry.target.classList.remove('iShow');
+                }
+
+            });
+        });
+        const hiddenImg = document.querySelectorAll('.himg');
+        hiddenImg.forEach((el) => iObserver.observe(el));
+
+        var lastScrollTop = 0;
+        var navbar = document.getElementById("navBar");
+
+        window.addEventListener("scroll", function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-80px';
+            } else {
+                navbar.style.top = "20px";
+            }
+            lastScrollTop = scrollTop;
+        });
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+
+        const colors = [
+            "#3C0008", // Dark Red
+            "#53000D", // Dark Reddish Black
+            "#6A0013", // Dark Maroon
+            "#810019", // Dark Crimson
+            "#99001F", // Maroon
+            "#B20025", // Crimson
+            "#CC002C", // Deep Red
+            "#E50032", // Intense Red
+            "#FF0038", // Flame Red
+            "#FF324F", // Fiery Red
+            "#FF6672", // Bright Red
+            "#FF9B95", // Coral Red
+            "#FFD0B9", // Light Coral
+            "#FFE6CE", // Light Salmon
+            "#FFEDD4", // Pale Red
+            "#FFF4DA", // Pale Pink
+            "#FFFBE0", // Very Pale Pink
+            "#FFF8E7", // Very Pale Salmon
+            "#FFF2DE", // Very Pale Orange
+            "#FFEDD4", // Pale Red
+            "#FFE6CE", // Light Salmon
+            "#FFD0B9", // Light Coral
+        ];
+
+
+
+
+
+
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+
+        });
+
+        function animateCircles() {
+
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+
+
     </script>
 
 
