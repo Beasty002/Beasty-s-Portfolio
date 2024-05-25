@@ -39,7 +39,7 @@
         }
 
         :root {
-            --content-width: 1200px;
+            --content-width: 1100px;
         }
 
         body {
@@ -128,15 +128,37 @@
         }
 
         .first-page {
+            box-sizing: border-box;
             width: var(--content-width);
             height: 90dvh;
-            padding: 10px 70px;
+            padding: 20px 80px;
             display: flex;
             gap: 30px;
         }
 
-        .first-page>* {
+        .content-container {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .content-container h1 {
+            font-size: 2.3rem;
+        }
+
+        figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        figure img {
+            height: 400px;
+            border-radius: 8000px;
+            object-fit: contain;
+            aspect-ratio: 1;
         }
     </style>
 </head>
@@ -152,9 +174,20 @@
     <main>
         <section class="first-page">
             <section class="content-container">
+                <h1>My name is <span style="color: red;">Aswin chhetri ,</span></h1>
+                <p style="padding-left: 10px; color: rgb(189, 189, 189); margin-top: 15px; font-size: 1.2rem;"> A UI/UX
+                    designer with a
+                    strong foundation in
+                    HTML and CSS.
+                    As a student,
+                    I've honed my skills
+                    through personal projects, gaining practical insights into design and development. Driven by a
+                    passion for creating intuitive and visually appealing user experiences, I strive to make every
+                    interaction seamless and enjoyable.</p>
 
             </section>
             <figure class="my-img-container">
+                <img src="./69762524_124495648592630_4261613334571449896_n.jpg" alt="">
 
             </figure>
         </section>
