@@ -160,6 +160,133 @@
             object-fit: contain;
             aspect-ratio: 1;
         }
+
+        /* ------------------------------------------------- */
+        #contactMe {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .form-container {
+            position: relative;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            height: 400px;
+            width: 800px;
+            background-color: #fffbce;
+            color: #0e1111;
+        }
+
+        .social-link {
+            position: absolute;
+            bottom: 60px;
+            border-radius: 20px 20px 20px 0px;
+            padding: 0.2em 3em;
+
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .get-in {
+            font-family: "Luxurious Script", cursive;
+            font-weight: 200;
+            font-size: 10rem;
+            text-align: center;
+        }
+
+        .my-mail {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .my-mail a {
+            color: blue;
+            font-size: 2.3rem;
+        }
+
+        .social-link {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-link.insta {
+            left: -40px;
+            top: 300px;
+            background: linear-gradient(to right,
+                    #833ab4, #fd1d1d, #fcb045);
+            transform: rotate(-40deg);
+        }
+
+        .social-link.fb {
+            left: -40px;
+            top: 100px;
+            transform: rotate(-40deg);
+
+            background: linear-gradient(to right,
+                    #00c6ff, #0072ff);
+        }
+
+        .social-link.linkedin {
+            right: -40px;
+            top: 300px;
+            transform: rotate(40deg);
+            border-radius: 100px 100px 0px 100px;
+
+            background: linear-gradient(to right, #0077B5, #00A0DC);
+        }
+
+        .social-link.git {
+            right: -40px;
+            top: 100px;
+            transform: rotate(40deg);
+            border-radius: 100px 100px 0px 100px;
+            background: linear-gradient(to right, #4078c0, #000000);
+        }
+
+        .social-link.Dribble {
+            right: -40px;
+            top: 200px;
+            transform: rotate(40deg);
+            border-radius: 100px 100px 0px 100px;
+            background: linear-gradient(to right, #EA4C89, #E95950, #8C1D40);
+        }
+
+        .social-link.behance {
+            left: -40px;
+            top: 200px;
+            transform: rotate(-40deg);
+
+            background: linear-gradient(to right, #1769FF, #7200FF);
+        }
+
+        .social-link {
+            position: absolute;
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            height: fit-content;
+            width: fit-content;
+            border-radius: 100px 100px 100px 0px;
+            transition: transform 0.3s;
+        }
+
+        .social-link:hover {
+            opacity: 0.8;
+            transform: rotate(0deg);
+        }
     </style>
 </head>
 
@@ -168,28 +295,49 @@
         <a href="./index.html" class="nav-link home">Home</a>
         <a href="" class="nav-link about">About</a>
         <a href="#project1" class="nav-link works">Works</a>
-        <a href="" class="nav-link contact">Contact</a>
+        <a href="#contactMe" class="nav-link contact">Contact</a>
         <a href="./AswinChhetri-CV.pdf" target="_blank" class="nav-link resume">Resume</a>
     </nav>
     <main>
         <section class="first-page">
             <section class="content-container">
                 <h1>My name is <span style="color: red;">Aswin chhetri ,</span></h1>
-                <p style="padding-left: 10px; color: rgb(189, 189, 189); margin-top: 15px; font-size: 1.2rem;"> A UI/UX
-                    designer with a
+                <p style="padding-left: 10px; color: rgb(189, 189, 189); margin-top: 15px; font-size: 1.2rem;"> A
+                    <b style="color: #fff;">UI/UX
+                        designer</b> with a
                     strong foundation in
-                    HTML and CSS.
+                    <b style="color: #fff;">HTML & CSS</b>.
                     As a student,
                     I've honed my skills
-                    through personal projects, gaining practical insights into design and development. Driven by a
-                    passion for creating intuitive and visually appealing user experiences, I strive to make every
-                    interaction seamless and enjoyable.</p>
+                    through <b style="color: #fff;">Personal Projects</b>, gaining practical insights into <b
+                        style="color: #fff;">Design & Development</b>. Driven by a
+                    passion for creating <b style="color: #fff;">Intuitive</b> and <b style="color: #fff;">Visually</b>
+                    appealing user experiences,
+                    I strive to make every
+                    interaction seamless and enjoyable.
+                </p>
 
             </section>
             <figure class="my-img-container">
                 <img src="./69762524_124495648592630_4261613334571449896_n.jpg" alt="">
-
             </figure>
+        </section>
+        <section>
+            <h1>Skills</h1>
+        </section>
+        <section id="contactMe">
+            <div class="form-container">
+                <h3 class="get-in">Get in touch</h3>
+                <p style="text-align: center;">Have any Idea or anything ? Feel free to contat me any time</p>
+                <h2 class="my-mail"><a href="mailto:aswinchhetri02@gmail.com"
+                        class="hiddenh">aswinchhetri02@gmail.com</a></h2>
+                <a href="" class="social-link insta hidden">Instagram</a>
+                <a href="" class="social-link fb hidden">Facebook</a>
+                <a href="" class="social-link behance hidden">Behance</a>
+                <a href="" class="social-link linkedin">LinkedIn</a>
+                <a href="" class="social-link git">Github</a>
+                <a href="" class="social-link Dribble">Dribble</a>
+            </div>
         </section>
 
     </main>
