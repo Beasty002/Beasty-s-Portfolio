@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Luxurious+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Beasty</title>
+    <style>
+        .circle {
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins';
+        }
+
+        :root {
+            --content-width: 1200px;
+        }
+
+        body {
+            background-color: #0e1111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main>* {
+            width: var(--content-width);
+        }
+
+        #navBar {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #navBar:hover .nav-link {
+            transform: rotate(0deg);
+        }
+
+        .nav-link {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: 200;
+            color: #c5c5c5;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        .nav-link.home {
+            transform: rotate(20deg);
+        }
+
+        .nav-link.about {
+            transform: rotate(20deg);
+        }
+
+        .nav-link.works {
+            transform: rotate(20deg);
+        }
+
+        .nav-link.contact {
+            transform: rotate(20deg);
+        }
+
+        .nav-link.resume {
+            color: #FFD700;
+            font-size: 1.2rem;
+            font-weight: 300;
+            transform: rotate(20deg);
+        }
+
+        .nav-link.resume:hover {
+            color: #FFDF00;
+            font-weight: 500;
+            text-shadow: 0 0 100px rgba(255, 223, 0, 0.8),
+                0 0 20px rgba(255, 223, 0, 0.6),
+                0 0 30px rgba(255, 223, 0, 0.4);
+
+        }
+
+        .projects-section {
+            border-left: 6px dotted #414a4c;
+            border-right: 6px dashed #414a4c;
+            padding: 0px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .first-page {
+            width: var(--content-width);
+            height: 90dvh;
+            padding: 10px 70px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .first-page>* {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navBar">
+        <a href="./index.html" class="nav-link home">Home</a>
+        <a href="" class="nav-link about">About</a>
+        <a href="#project1" class="nav-link works">Works</a>
+        <a href="" class="nav-link contact">Contact</a>
+        <a href="./AswinChhetri-CV.pdf" target="_blank" class="nav-link resume">Resume</a>
+    </nav>
+    <main>
+        <section class="first-page">
+            <section class="content-container">
+
+            </section>
+            <figure class="my-img-container">
+
+            </figure>
+        </section>
+
+    </main>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <script>
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+
+        const colors = [
+            "#3C0008", // Dark Red
+            "#53000D", // Dark Reddish Black
+            "#6A0013", // Dark Maroon
+            "#810019", // Dark Crimson
+            "#99001F", // Maroon
+            "#B20025", // Crimson
+            "#CC002C", // Deep Red
+            "#E50032", // Intense Red
+            "#FF0038", // Flame Red
+            "#FF324F", // Fiery Red
+            "#FF6672", // Bright Red
+            "#FF9B95", // Coral Red
+            "#FFD0B9", // Light Coral
+            "#FFE6CE", // Light Salmon
+            "#FFEDD4", // Pale Red
+            "#FFF4DA", // Pale Pink
+            "#FFFBE0", // Very Pale Pink
+            "#FFF8E7", // Very Pale Salmon
+            "#FFF2DE", // Very Pale Orange
+            "#FFEDD4", // Pale Red
+            "#FFE6CE", // Light Salmon
+            "#FFD0B9", // Light Coral
+        ];
+
+
+
+
+
+
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+
+        });
+
+        function animateCircles() {
+
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+
+    </script>
+
+</body>
+
+</html>
