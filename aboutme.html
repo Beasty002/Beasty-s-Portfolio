@@ -36,6 +36,7 @@
             margin: 0;
             padding: 0;
             font-family: 'poppins';
+            box-sizing: border-box;
         }
 
         :root {
@@ -103,9 +104,9 @@
         }
 
         .nav-link.resume {
-            color: #FFD700;
+            /* color: #FFD700;
             font-size: 1.2rem;
-            font-weight: 300;
+            font-weight: 300; */
             transform: rotate(20deg);
         }
 
@@ -130,7 +131,7 @@
         .first-page {
             box-sizing: border-box;
             width: var(--content-width);
-            height: 90dvh;
+            height: 85dvh;
             padding: 20px 80px;
             display: flex;
             gap: 30px;
@@ -292,6 +293,29 @@
             opacity: 0.8;
             transform: rotate(-25deg);
         }
+
+        #skills {
+
+            padding: 20px 80px;
+
+            h1 {
+                margin-bottom: 20px;
+                padding-left: 5px;
+            }
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+
+        }
+
+        .icon-container>* {
+            width: 80px;
+            object-fit: contain;
+        }
     </style>
 </head>
 
@@ -306,28 +330,34 @@
     <main>
         <section class="first-page">
             <section class="content-container">
-                <h1>My name is <span style="color: red;">Aswin chhetri ,</span></h1>
-                <p style="padding-left: 10px; color: rgb(189, 189, 189); margin-top: 15px; font-size: 1.2rem;"> A
-                    <b style="color: #fff;">UI/UX
-                        designer</b> with a
-                    strong foundation in
-                    <b style="color: #fff;">HTML & CSS</b>.
-                    As a student,
-                    I've honed my skills
-                    through <b style="color: #fff;">Personal Projects</b>, gaining practical insights into <b
-                        style="color: #fff;">Design & Development</b>. Driven by a
-                    passion for creating <b style="color: #fff;">Intuitive</b> and <b style="color: #fff;">Visually</b>
-                    appealing user experiences,
-                    I strive to make every
-                    interaction seamless and enjoyable.
+                <h1>My name is <span style="color: red;">Aswin Chhetri,</span></h1>
+                <p style="padding-left: 10px; color: rgb(189, 189, 189); margin-top: 15px; font-size: 1.2rem;">
+                    A <b style="color: #fff;">UI/UX Designer</b> with a strong foundation in <b
+                        style="color: #fff;">HTML, CSS, and React</b>.
+                    As a student, I've honed my skills through <b style="color: #fff;">Personal Projects</b>, gaining
+                    practical insights into <b style="color: #fff;">Design & Development</b>.
+                    Driven by a passion for creating <b style="color: #fff;">Intuitive</b> and <b
+                        style="color: #fff;">Visually</b> appealing user experiences,
+                    I strive to make every interaction seamless and enjoyable.
                 </p>
             </section>
+
             <figure class="my-img-container">
                 <img src="./69762524_124495648592630_4261613334571449896_n.jpg" alt="">
             </figure>
         </section>
-        <section>
+        <section id="skills">
             <h1>Skills</h1>
+            <section class="icon-container">
+                <img src="./Assets/icons/figma.png" alt="">
+                <img src="./Assets/icons/react.png" alt="">
+                <img src="./Assets/icons/html.png" alt="">
+                <img src="./Assets/icons/css.png" alt="">
+                <img src="./Assets/icons/js.png" alt="">
+                <img src="./Assets/icons/next.png" alt="">
+                <img src="./Assets/icons/sass.png" alt="">
+                <img src="./Assets/icons/tailwind.png" alt="">
+            </section>
         </section>
         <section id="contactMe">
             <div class="form-container">
